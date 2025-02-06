@@ -10,8 +10,11 @@
     <title>Move Up Online</title>
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600;700;800;900&display=swap&subset=latin-ext" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600;700;800;900&display=swap&subset=latin-ext"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap&subset=latin-ext"
+        rel="stylesheet">
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -71,22 +74,8 @@
                     <nav class="nav-menu">
                         <ul>
                             <li class="active"><a href="./index.html">Ana Sayfa</a></li>
-                            <li><a href="./about-us.html">Hakkımızda</a></li>
-                            <!-- <li><a href="./class-details.html">Classes</a></li> -->
-                            <!-- <li><a href="./services.html">Services</a></li> -->
-                            <!-- <li><a href="./team.html">Our Team</a></li> -->
-                            <!-- <li><a href="#">Pages</a>
-                                <ul class="dropdown">
-                                    <li><a href="./about-us.html">About us</a></li>
-                                    <li><a href="./class-timetable.html">Classes timetable</a></li>
-                                    <li><a href="./bmi-calculator.html">Bmi calculate</a></li>
-                                    <li><a href="./team.html">Our team</a></li>
-                                    <li><a href="./gallery.html">Gallery</a></li>
-                                    <li><a href="./blog.html">Our blog</a></li>
-                                    <li><a href="./404.html">404</a></li>
-                                </ul>
-                            </li> -->
-                            <li><a href="./contact.html">İletişim</a></li>
+                            <li><a href="#about-us">Hakkımızda</a></li>
+                            <li><a href="#contact">İletişim</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -132,7 +121,7 @@
     <!-- Hero Section End -->
 
     <!-- ChoseUs Section Begin -->
-    <section class="choseus-section spad">
+    <section id="about-us" class="choseus-section spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -154,7 +143,8 @@
                     <div class="cs-item">
                         <span class="flaticon-033-juice"></span>
                         <h4>Postürünüzü düzeltin</h4>
-                        <p>Doğru duruşu destekleyen egzersizlerle fiziksel görünümünü iyileştir<br>ve hareket özgürlüğünü artır.</p>
+                        <p>Doğru duruşu destekleyen egzersizlerle fiziksel görünümünü iyileştir<br>ve hareket
+                            özgürlüğünü artır.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
@@ -369,26 +359,73 @@
                 </div>
             </div>
             <div class="row">
-                    <div class="col-lg-6">
-                        <div class="ts-item set-bg" data-setbg="img/team/team-1.jpg">
-                            <div class="ts_text">
-                                <h4>Seray Güray</h4>
-                                <span>Pilates Eğitmeni</span>
-                            </div>
+                <div class="col-lg-6">
+                    <div class="ts-item set-bg" data-setbg="img/team/team-1.jpg">
+                        <div class="ts_text">
+                            <h4>Seray Güray</h4>
+                            <span>Pilates Eğitmeni</span>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="ts-item set-bg" data-setbg="img/team/team-2.jpg">
-                            <div class="ts_text">
-                                <h4>Tolga Vidinligil</h4>
-                                <span>Fitness Eğitmeni</span>
-                            </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ts-item set-bg" data-setbg="img/team/team-2.jpg">
+                        <div class="ts_text">
+                            <h4>Tolga Vidinligil</h4>
+                            <span>Fitness Eğitmeni</span>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
     </section>
     <!-- Team Section End -->
+
+    <!-- Contact Section Begin -->
+    <section id="contact" class="contact-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title contact-title">
+                        <span>İLETİŞİM</span>
+                        <h2>Bize Ulaşın</h2>
+                    </div>
+                    <div class="contact-widget">
+                        <div class="cw-text">
+                            <i class="fa fa-map-marker"></i>
+                            <p>Adres burada kom 34599<br /> Kadıköy/İstanbul</p>
+                        </div>
+                        <div class="cw-text">
+                            <i class="fa fa-mobile"></i>
+                            <ul>
+                                <li>0 545 957 75 31</li>
+                                <li>0 532 557 41 99</li>
+                            </ul>
+                        </div>
+                        <div class="cw-text email">
+                            <i class="fa fa-envelope"></i>
+                            <p>info@moveuponline.co</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="leave-comment">
+                        <form action="#">
+                            <input type="text" placeholder="İsim Soyisim">
+                            <input type="text" placeholder="E-Posta Adresi">
+                            <textarea placeholder="Mesajınız"></textarea>
+                            <button type="submit">Gönder</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6028.628351964424!2d29.086239077231895!3d40.970783021730966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac77b60725db3%3A0xabdee425902dbb19!2sSports%20Factory%20Pilates!5e0!3m2!1sen!2snl!4v1738871042436!5m2!1sen!2snl"
+                    height="550" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section End -->
 
     <!-- Get In Touch Section Begin -->
     <div class="gettouch-section">
@@ -397,7 +434,7 @@
                 <div class="col-md-4">
                     <div class="gt-text">
                         <i class="fa fa-map-marker"></i>
-                        <p>Adres burada kom 34599<br/> Kadıköy/İstanbul</p>
+                        <p>Adres burada kom 34599<br /> Kadıköy/İstanbul</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -447,11 +484,13 @@
                 <div class="col-lg-12 text-center">
                     <div class="copyright-text">
                         <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Telif Hakkı &copy;<script>document.write(new Date().getFullYear());</script> Tüm hakları saklıdır | Bu websitesi <i class="fa fa-heart" aria-hidden="true"></i> <a href="https://colorlib.com" target="_blank">Colorlib</a> şablonu ile yapılmıştır.
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                            Telif Hakkı &copy;
+                            <script>document.write(new Date().getFullYear());</script> Tüm hakları saklıdır | Bu
+                            websitesi <i class="fa fa-heart" aria-hidden="true"></i> <a href="https://colorlib.com"
+                                target="_blank">Colorlib</a> şablonu ile yapılmıştır.
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
                     </div>
-
-                    Telif Hakkı ©2025 Tüm hakları saklıdır | Bu şablon Colorlib tarafından yapılmıştır
                 </div>
             </div>
         </div>
@@ -478,6 +517,23 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute("href").substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 50,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 
 
 
