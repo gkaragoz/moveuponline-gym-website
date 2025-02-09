@@ -5,22 +5,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = htmlspecialchars($_POST["message"]);
 
     $to = "tolga@moveuponline.co";
-    $subject = "New Contact Form Message from $name";
+    $subject = "Yeni İletişim Formu Mesajı: $name";
     $headers = "From: $email\r\n";
     $headers .= "Reply-To: $email\r\n";
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-    $email_body = "Name: $name\n";
-    $email_body .= "Email: $email\n";
-    $email_body .= "Message:\n$message\n";
+    $email_body = "Ad: $name\n";
+    $email_body .= "E-posta: $email\n";
+    $email_body .= "Mesaj:\n$message\n";
 
-    // Send Email
+    // E-posta gönderme işlemi
     if (mail($to, $subject, $email_body, $headers)) {
-        echo "success";
+        echo json_encode(["status" => "success", "message" => "Mesajınız başarıyla gönderildi."]);
     } else {
-        echo "error";
+        echo json_encode(["status" => "error", "message" => "Mesaj gönderilirken bir hata oluştu."]);
     }
 } else {
-    echo "Invalid Request!";
+    echo json_encode(["status" => "error", "message" => "Geçersiz istek!"]);
 }
 ?>

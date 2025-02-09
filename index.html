@@ -132,14 +132,14 @@
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
                     <div class="cs-item">
-                        <span class="flaticon-016-fitness"></span>
+                        <span class="flaticon-001-mattress"></span>
                         <h4>Hedeflerinize ulaşalım</h4>
                         <p>İhtiyaçlarınıza göre hazırlanmış antrenmanlarımız<br>ile hedeflerinize ulaşalım.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="cs-item">
-                        <span class="flaticon-017-pull-up-bar"></span>
+                        <span class="flaticon-037-medal"></span>
                         <h4>Postürünüzü düzeltin</h4>
                         <p>Doğru duruşu destekleyen egzersizlerle fiziksel görünümünü iyileştir<br>ve hareket
                             özgürlüğünü artır.</p>
@@ -404,12 +404,13 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="leave-comment">
-                        <form action="send_email.php" method="post">
+                        <form id="contactForm">
                             <input type="text" name="name" placeholder="İsim Soyisim" required>
                             <input type="email" name="email" placeholder="E-Posta Adresi" required>
                             <textarea name="message" placeholder="Mesajınız" required></textarea>
                             <button type="submit">Gönder</button>
-                        </form>                        
+                            <div id="formMessage"></div>
+                        </form>                     
                     </div>
                 </div>
             </div>
@@ -489,6 +490,7 @@
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
@@ -513,6 +515,36 @@
                 });
             });
         });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+    $("#contactForm").submit(function (event) {
+        event.preventDefault(); // Sayfanın yenilenmesini engelle
+
+        var formData = $(this).serialize(); // Form verilerini al
+
+        $.ajax({
+            type: "POST",
+            url: "send_email.php",
+            data: formData,
+            dataType: "json",
+            success: function (response) {
+                var messageBox = $("#formMessage");
+                if (response.status === "success") {
+                    messageBox.html("<p class='success-msg'>" + response.message + "</p>");
+                    $("#contactForm")[0].reset(); // Formu temizle
+                } else {
+                    messageBox.html("<p class='error-msg'>" + response.message + "</p>");
+                }
+            },
+            error: function () {
+                $("#formMessage").html("<p class='error-msg'>Bir hata oluştu, lütfen tekrar deneyin.</p>");
+            }
+        });
+    });
+});
+
     </script>
 
 <!-- WhatsApp Floating Button -->

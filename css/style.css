@@ -3314,3 +3314,26 @@ ol {
 .whatsapp-container:hover .whatsapp-text {
     background-color: #1ebea5;
 }
+
+/* Form Mesaj Kutusu */
+#formMessage {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Başarı Mesajı */
+.success-msg {
+    color: white;
+    background-color: #25d366; /* WhatsApp Yeşili */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Hata Mesajı */
+.error-msg {
+    color: white;
+    background-color: #e74c3c; /* Kırmızı */
+    padding: 10px;
+    border-radius: 5px;
+}
