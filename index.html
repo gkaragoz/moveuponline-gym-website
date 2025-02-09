@@ -404,12 +404,12 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="leave-comment">
-                        <form action="#">
-                            <input type="text" placeholder="İsim Soyisim">
-                            <input type="text" placeholder="E-Posta Adresi">
-                            <textarea placeholder="Mesajınız"></textarea>
+                        <form action="send_email.php" method="post">
+                            <input type="text" name="name" placeholder="İsim Soyisim" required>
+                            <input type="email" name="email" placeholder="E-Posta Adresi" required>
+                            <textarea name="message" placeholder="Mesajınız" required></textarea>
                             <button type="submit">Gönder</button>
-                        </form>
+                        </form>                        
                     </div>
                 </div>
             </div>
