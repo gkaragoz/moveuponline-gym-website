@@ -404,10 +404,13 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="leave-comment">
-                        <form id="contactForm">
+                        <form action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="6448c38b-f675-4d80-9c22-f491e592a3d8">
                             <input type="text" name="name" placeholder="İsim Soyisim" required>
                             <input type="email" name="email" placeholder="E-Posta Adresi" required>
                             <textarea name="message" placeholder="Mesajınız" required></textarea>
+                            <!-- Honeypot Spam Protection -->
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                             <button type="submit">Gönder</button>
                             <div id="formMessage"></div>
                         </form>                     
